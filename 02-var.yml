@@ -12,3 +12,12 @@
           msg: URL = {{ URL }}
       vars:
         URL: tasks.example.com
+
+- name: Variable from files
+  hosts: all
+  vars_files:
+    - sample-vars.yml
+  tasks:
+    - name: Print URL from vars_files
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}

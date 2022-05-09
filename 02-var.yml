@@ -21,3 +21,10 @@
     - name: Print URL from vars_files
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+- name: Variable from Inventory
+  hosts: all
+  tasks:
+    - name: Print URL from vars_files
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}

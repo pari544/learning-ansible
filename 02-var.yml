@@ -38,13 +38,13 @@
       ansible.builtin.debug:
         msg: OS Distribution = {{ ansible_distribution }}
 
-- name: Reigister a Variable
+- name: Register a Variable
   hosts: all
   tasks:
     - name: Uptime commands
       ansible.builtin.shell: uptime
       register: OUT
 
-      - name: Print OUT
-        ansible.builtin.debug:
-          msg: "{{ OUT }}"
+    - name: Print OUT
+      ansible.builtin.debug:
+        msg: "{{ OUT }}"

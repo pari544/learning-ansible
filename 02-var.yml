@@ -32,7 +32,7 @@
 - name: Variable from Fact
   hosts: all
   vars:
-    - ansible_distribution = TEST
+    - ansible_distribution: TEST
   tasks:
     - name: Print Fact
       ansible.builtin.debug:

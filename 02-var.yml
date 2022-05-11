@@ -48,3 +48,6 @@
     - name: Print OUT
       ansible.builtin.debug:
         msg: "{{ OUT }}"
+    - name: Set a Variable
+      ansible.builtin.set_fact:
+        STDOUT: "{{OUT.stdout}}"
